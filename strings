@@ -4,7 +4,9 @@
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-
+def shorten_summary(long_summary,num_sent=2):
+    sentences = (sent_tokenize(long_summary)[:num_sent])
+    return ' '.join(map(str, sentences))
 
 def remove_accents(input_str):
     nfkd_form = unicodedata.normalize('NFKD', input_str)
