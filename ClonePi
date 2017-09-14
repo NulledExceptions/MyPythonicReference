@@ -1,0 +1,11 @@
+diskutil list
+
+sudo dd if=/dev/disk5 of=~/RaspberryVoiceBoxBackup.dmg
+
+
+diskutil unmountDisk /dev/disk1
+
+
+sudo dd if=~/SDCardBackup.dmg of=/dev/disk
+
+sudo diskutil eject /dev/rdisk3
