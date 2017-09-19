@@ -1,0 +1,9 @@
+#SystemCTL 
+systemctl disable systemd-timesyncd.service
+chkconfig --list
+systemctl list-unit-files
+service --status-all
+servers https status
+sudo /etc/init.d/ntp stop
+sudo ntpd -q -g
+sudo /etc/init.d/ntp start
