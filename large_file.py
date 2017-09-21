@@ -7,3 +7,8 @@ for file in files:
 	with open(file) as FileObj:
 	    for line in FileObj:
           print line
+
+	
+	
+#insert headers
+echo 'Input Hash, URL,Classified Sentence,Name,ID,Path,ID Path,Source File' | cat - stream_test.csv > temp && mv temp stream_test.csv
