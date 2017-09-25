@@ -2,3 +2,9 @@ split -l 200000 filename
 
 ##Remove dupes from 2nd column
 awk  -F $','' '!a[$2]++' ALL_other.csv 
+
+##Run command after network interface is brought up
+auto eth0
+    iface eth0 inet dhcp
+    post-up /usr/local/sbin/my-custom-script
+
