@@ -1,3 +1,8 @@
+##Combine two CSV's
+sed 1d file2.csv > file2noheader.csv
+cat file1.csv file2noheader.csv > outputfile.csv
+
+
 split -l 200000 filename
 
 ##Remove dupes from 2nd column
