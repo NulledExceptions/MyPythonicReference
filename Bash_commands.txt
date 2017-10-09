@@ -3,6 +3,14 @@ sed 1d file2.csv > file2noheader.csv
 cat file1.csv file2noheader.csv > outputfile.csv
 
 
+##Remove last line of file
+tail -n 1 "$file" | wc -c | xargs -I {} truncate "$file" -s -{}
+
+#Remove and display to stdout
+tail -n 1 "$file" | tee >(wc -c | xargs -I {} truncate "$file" -s -{})
+
+
+
 split -l 200000 filename
 
 ##Remove dupes from 2nd column
