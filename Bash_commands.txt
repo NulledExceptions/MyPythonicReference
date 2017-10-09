@@ -9,7 +9,8 @@ tail -n 1 "$file" | wc -c | xargs -I {} truncate "$file" -s -{}
 #Remove and display to stdout
 tail -n 1 "$file" | tee >(wc -c | xargs -I {} truncate "$file" -s -{})
 
-
+##For OSX, Remove Last Line
+cat "FILE" | tail -r | tail -n +2 | tail -r
 
 split -l 200000 filename
 
