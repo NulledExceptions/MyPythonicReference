@@ -2,6 +2,9 @@
 sed 1d file2.csv > file2noheader.csv
 cat file1.csv file2noheader.csv > outputfile.csv
 
+##Insert Headers to file
+ex -sc '1i|MY New Text' -cx Insert_line.txt
+##"Input Hash","URL","Classified Sentence","Name","ID","Path","ID Path","Source File"
 
 ##Remove last line of file
 tail -n 1 "$file" | wc -c | xargs -I {} truncate "$file" -s -{}
