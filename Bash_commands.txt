@@ -4,6 +4,8 @@ cat file1.csv file2noheader.csv > outputfile.csv
 
 ##Insert Headers to file
 ex -sc '1i|MY New Text' -cx Insert_line.txt
+ex -sc '1i|"Input Hash","URL","Classified Sentence","Name","ID","Path","ID Path","Source File"' -cx Insert_line.txt  
+
 ##"Input Hash","URL","Classified Sentence","Name","ID","Path","ID Path","Source File"
 
 ##Remove last line of file
