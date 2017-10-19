@@ -31,3 +31,5 @@ auto eth0
     iface eth0 inet dhcp
     post-up /usr/local/sbin/my-custom-script
 
+## Nohup
+nohup find -size +100k > log.txt &
