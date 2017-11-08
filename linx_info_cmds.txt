@@ -1,0 +1,13 @@
+
+## OS Information
+cat /etc/*-release
+lsb_release -a
+/proc/version
+
+uname -a
+uname -mrs
+
+
+
+
+cat /proc/meminfo

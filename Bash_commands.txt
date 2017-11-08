@@ -1,6 +1,9 @@
 ##StripColumnsFromCSV
 cut -d "," -f6-7 20M_Hashes_copy.csv > 20M_col.6.7_Hashes.csv
 
+##Remove dupes from 2nd column
+awk  -F $','' '!a[$2]++' ALL_other.csv 
+
 
 ##Combine two CSV's
 sed 1d file2.csv > file2noheader.csv
@@ -31,3 +34,5 @@ auto eth0
     iface eth0 inet dhcp
     post-up /usr/local/sbin/my-custom-script
 
+## Nohup
+nohup find -size +100k > log.txt &
