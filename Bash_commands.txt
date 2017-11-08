@@ -36,3 +36,7 @@ auto eth0
 
 ## Nohup
 nohup find -size +100k > log.txt &
+
+
+##Get file encodings
+file -I {filename}
