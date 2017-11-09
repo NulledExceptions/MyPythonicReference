@@ -40,3 +40,6 @@ nohup find -size +100k > log.txt &
 
 ##Get file encodings
 file -I {filename}
+
+##Combine json files from folder 
+find data/ -name '*.json' -exec cat {} \; > uber.json
