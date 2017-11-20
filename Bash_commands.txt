@@ -1,6 +1,10 @@
 ##StripColumnsFromCSV
 cut -d "," -f6-7 20M_Hashes_copy.csv > 20M_col.6.7_Hashes.csv
 
+
+##Dedupe lines in file 
+sort myfile.txt | uniq >> deduped_myfile.txt
+
 ##Remove dupes from 2nd column
 awk  -F $','' '!a[$2]++' ALL_other.csv 
 
