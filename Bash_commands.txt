@@ -4,6 +4,9 @@ cut -d "," -f6-7 20M_Hashes_copy.csv > 20M_col.6.7_Hashes.csv
 ##Pick Random lines from file:
 shuf -n N input > output
 
+## Sort randomly and take first 100 lines
+sort -R input | head -n 100 >output
+
 
 ##Dedupe lines in file 
 sort myfile.txt | uniq >> deduped_myfile.txt
