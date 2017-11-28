@@ -8,6 +8,9 @@ shuf -n N input > output
 sort -R input | head -n 100 >output
 
 
+## Uncompress and combine files (and remove old files)
+zcat *.gz > newfile && rm -f *.gz
+
 ##Dedupe lines in file 
 sort myfile.txt | uniq >> deduped_myfile.txt
 
