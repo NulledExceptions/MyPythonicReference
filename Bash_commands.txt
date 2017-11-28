@@ -11,6 +11,9 @@ sort -R input | head -n 100 >output
 ## Uncompress and combine files (and remove old files)
 zcat *.gz > newfile && rm -f *.gz
 
+## OSX uncompress folder of .gz , combine into one compressed file
+gzip -cdr compressed/ | gzip > combined.csv.gz
+
 ##Dedupe lines in file 
 sort myfile.txt | uniq >> deduped_myfile.txt
 
