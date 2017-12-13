@@ -59,3 +59,7 @@ file -I {filename}
 
 ##Combine json files from folder 
 find data/ -name '*.json' -exec cat {} \; > uber.json
+
+
+##Count files in folder
+ls -1 | wc -l
